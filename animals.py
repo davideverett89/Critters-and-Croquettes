@@ -270,6 +270,7 @@ for animal in petting_area_animals:
 
 def feedAnimals(animal_list):
     for animal in animal_list:
+        print(animal)
         animal.feed()
 
 def runFeedAnimals():
