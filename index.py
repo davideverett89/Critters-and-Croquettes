@@ -47,10 +47,7 @@ def assignAnimals(animals_list):
 def report_to_terminal():
     assignAnimals(petting_zoo_animals)
     for attraction in petting_zoo_attractions:
-        print(f"""
-{attraction} Allow me to introduce them:
-_________________________________________________________________________________
-""")
+        print(f"{attraction} Allow me to introduce them:")
         for animal in attraction.animals:
             print(f"* {animal}")
 
