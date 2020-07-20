@@ -8,5 +8,10 @@ class PettingZoo:
     def add_animals(self, animal):
         self.animals.append(animal)
 
+    @property
+    def last_animal_added(self):
+        last_animal = self.animals[-1]
+        return last_animal
+
     def __str__(self):
         return f"{self.attraction_name}: {self.description}"

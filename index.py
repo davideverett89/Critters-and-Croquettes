@@ -10,8 +10,8 @@ varmint_village = PettingZoo("Varmint Village", "A place to pet and feed some cu
 slither_inn = SnakePit("Slither Inn", "A place to check out some creepy snakes!")
 critter_cove = Wetlands("Critter Cove", "Come hang out with our aquatic friends!")
 
-steve = Llama('Steve', 'Llama', 'morning', 'oats')
-sharon = Llama('Sharon', 'Llama', 'evening', 'oats')
+steve = Llama('Steve', 1234567, 'Llama', 'morning', 'oats')
+sharon = Llama('Sharon', 32165467, 'Llama', 'evening', 'oats')
 frank = Goat('Frank', 'Goat', 'evening', 'oats')
 darlene = Goat('Darlene', 'Goat', 'morning', 'oats')
 bob = Pig('Bob', 'Pig', 'midday', 'slop')
@@ -31,6 +31,9 @@ jessica = Catfish('Jessica', 'Catfish', 'fish food')
 betty = LargemouthBass('Betty', 'Largemouth Bass', 'fish food')
 bertha = Frog('Bertha', 'Frog', 'flies')
 
+steve.chip_number = 3333333333
+print('Llama number:', steve.chip_number)
+
 petting_zoo_animals = [steve, sharon, darlene, randy, frank, bob, jeff, george, pete, rodger, maxwell, terrence, mary, reginald, katie, jessica, betty, bertha]
 petting_zoo_attractions = [varmint_village, slither_inn, critter_cove]
 
@@ -46,6 +49,7 @@ def assignAnimals(animals_list):
 
 def report_to_terminal():
     assignAnimals(petting_zoo_animals)
+    print('Last animal in varmint village:', varmint_village.last_animal_added)
     for attraction in petting_zoo_attractions:
         print(f"{attraction} Allow me to introduce them:")
         for animal in attraction.animals:
