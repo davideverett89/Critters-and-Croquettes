@@ -1,16 +1,7 @@
-from datetime import date
+from critters_and_croquettes.animals import Animal
 
-class CopperheadSnake:
+class CopperheadSnake(Animal):
     
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.food = food
-        self.dated_added = date.today()
+    def __init__(self, name, chip_number, species, food):
+        super().__init__(name, chip_number, species, food)
         self.isSlithering = True
-
-    def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-            return f"{self.name} is a {self.species}"

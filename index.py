@@ -12,24 +12,24 @@ critter_cove = Wetlands("Critter Cove", "Come hang out with our aquatic friends!
 
 steve = Llama('Steve', 1234567, 'Llama', 'morning', 'oats')
 sharon = Llama('Sharon', 32165467, 'Llama', 'evening', 'oats')
-frank = Goat('Frank', 'Goat', 'evening', 'oats')
-darlene = Goat('Darlene', 'Goat', 'morning', 'oats')
-bob = Pig('Bob', 'Pig', 'midday', 'slop')
-randy = Pig('Randy', 'Pig', 'evening', 'slop')
-jeff = Rabbit('Jeff', 'Rabbit', 'evening', 'carrots')
-george = GiantTortoise('George', 'Giant Tortoise', 'midday', 'cabbage')
+frank = Goat('Frank', 1111111111, 'Goat', 'evening', 'oats')
+darlene = Goat('Darlene', 222222222, 'Goat', 'morning', 'oats')
+bob = Pig('Bob', 333333333333, 'Pig', 'midday', 'slop')
+randy = Pig('Randy', 44444444444, 'Pig', 'evening', 'slop')
+jeff = Rabbit('Jeff', 555555555555, 'Rabbit', 'evening', 'carrots')
+george = GiantTortoise('George', 6666666666, 'Giant Tortoise', 'midday', 'cabbage')
 
-pete = PythonSnake('Pete', 'Python', 'dead rat')
-rodger = CopperheadSnake('Rodger', 'Copperhead', 'dead rat')
-maxwell = RatSnake('Maxwell', 'Rat Snake', 'dead rat')
-terrence = Rattlesnake('Terrence', 'Rattlesnake', 'small child')
-mary = GarterSnake('Mary', 'Garter Snake', 'dead rat')
+pete = PythonSnake('Pete', 77777777777, 'Python', 'dead rat')
+rodger = CopperheadSnake('Rodger', 8888888888888, 'Copperhead', 'dead rat')
+maxwell = RatSnake('Maxwell', 99999999999, 'Rat Snake', 'dead rat')
+terrence = Rattlesnake('Terrence', 1010101010101010, 'Rattlesnake', 'small child')
+mary = GarterSnake('Mary', 1212121212121212, 'Garter Snake', 'dead rat')
 
-reginald = Goldfish('Reginald', 'Goldfish', 'fish food')
-katie = MallardDuck('Katie', 'Mallard Duck', 'bread')
-jessica = Catfish('Jessica', 'Catfish', 'fish food')
-betty = LargemouthBass('Betty', 'Largemouth Bass', 'fish food')
-bertha = Frog('Bertha', 'Frog', 'flies')
+reginald = Goldfish('Reginald', 131313131313, 'Goldfish', 'fish food')
+katie = MallardDuck('Katie', 141414141414, 'Mallard Duck', 'bread')
+jessica = Catfish('Jessica', 151515151515, 'Catfish', 'fish food')
+betty = LargemouthBass('Betty', 161616161616, 'Largemouth Bass', 'fish food')
+bertha = Frog('Bertha', 171717171717, 'Frog', 'flies')
 
 steve.chip_number = 3333333333
 print('Llama number:', steve.chip_number)
@@ -54,6 +54,11 @@ def report_to_terminal():
         print(f"{attraction} Allow me to introduce them:")
         for animal in attraction.animals:
             print(f"* {animal}")
+
+print('Pig feeding:',randy.feed())
+print('Frog feeding:', bertha.feed())
+print('Giant tortoise feeding:', george.feed())
+print('Feeding all others:', maxwell.feed())
 
 
 report_to_terminal()

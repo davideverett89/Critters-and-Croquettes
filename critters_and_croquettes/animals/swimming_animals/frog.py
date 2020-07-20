@@ -1,16 +1,10 @@
-from datetime import date
+from critters_and_croquettes.animals import Animal
 
-class Frog:
-
-    def __init__(self, name, species, food):
-        self.name = name
-        self.species = species
-        self.food = food
-        self.date_added = date.today()
+class Frog(Animal):
+    
+    def __init__(self, name, chip_number, species, food):
+        super().__init__(name, chip_number, species, food)
         self.isSwimming = True
 
     def feed(self):
-        print(f'{self.name} was fed {self.food} on {date.today().strftime("%m/%d/%Y")}')
-
-    def __str__(self):
-            return f"{self.name} is a {self.species}"
+        return f'{self.name} must meditate for 3 hours before feeding.'
