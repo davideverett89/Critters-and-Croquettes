@@ -1,3 +1,5 @@
+from .animal import Animal
+
 from .slithering_animals import CopperheadSnake
 from .slithering_animals import GarterSnake
 from .slithering_animals import PythonSnake
