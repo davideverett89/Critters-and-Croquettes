@@ -55,5 +55,10 @@ def report_to_terminal():
         for animal in attraction.animals:
             print(f"* {animal}")
 
+print('Pig feeding:',randy.feed())
+print('Frog feeding:', bertha.feed())
+print('Giant tortoise feeding:', george.feed())
+print('Feeding all others:', maxwell.feed())
+
 
 report_to_terminal()

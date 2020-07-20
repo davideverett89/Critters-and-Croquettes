@@ -6,3 +6,6 @@ class Pig(Animal):
         super().__init__(name, chip_number, species, food)
         self.shift = shift
         self.isWalking = True
+
+    def feed(self):
+        return f'{self.name} must roll around in mud before he/she is ready to eat.'
