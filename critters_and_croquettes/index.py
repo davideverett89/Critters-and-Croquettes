@@ -41,11 +41,13 @@ petting_zoo_attractions = [varmint_village, slither_inn, critter_cove]
 def assignAnimals(animals_list):
     for animal in animals_list:
         if hasattr(animal, 'walk_speed'):
-            varmint_village.add_animals(animal)
+            varmint_village.add_animal(animal)
         elif hasattr(animal, 'slither_speed'):
-            slither_inn.add_animals(animal)
+            slither_inn.add_animal(animal)
         elif hasattr(animal, 'swim_speed'):
-            critter_cove.add_animals(animal)
+            critter_cove.add_animal(animal)
+
+varmint_village.add_animal(becky)
 
 
 def report_to_terminal():
