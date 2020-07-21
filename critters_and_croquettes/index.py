@@ -1,10 +1,5 @@
-from critters_and_croquettes import Llama, Goat, Pig, Rabbit, GiantTortoise
-from critters_and_croquettes import PythonSnake, CopperheadSnake, RatSnake, Rattlesnake, GarterSnake
-from critters_and_croquettes import Goldfish, MallardDuck, Catfish, LargemouthBass, Frog
-
-from critters_and_croquettes import PettingZoo
-from critters_and_croquettes import SnakePit
-from critters_and_croquettes import Wetlands
+from animals import Goose, Catfish, CopperheadSnake, Frog, GarterSnake, GiantTortoise, Goat, Goldfish, LargemouthBass, Llama, MallardDuck, Pig, PythonSnake, Rabbit, RatSnake, Rattlesnake
+from attractions import PettingZoo, SnakePit, Wetlands
 
 varmint_village = PettingZoo("Varmint Village", "A place to pet and feed some cuddly critters!")
 slither_inn = SnakePit("Slither Inn", "A place to check out some creepy snakes!")
@@ -31,6 +26,12 @@ jessica = Catfish('Jessica', 151515151515, 'Catfish', 'fish food')
 betty = LargemouthBass('Betty', 161616161616, 'Largemouth Bass', 'fish food')
 bertha = Frog('Bertha', 171717171717, 'Frog', 'flies')
 
+becky = Goose('Becky', 6666666666, 'Goose', 'seeds')
+
+print('Becky:', becky)
+becky.run()
+becky.swim()
+
 steve.chip_number = 3333333333
 print('Llama number:', steve.chip_number)
 
@@ -39,12 +40,14 @@ petting_zoo_attractions = [varmint_village, slither_inn, critter_cove]
 
 def assignAnimals(animals_list):
     for animal in animals_list:
-        if hasattr(animal, 'isWalking'):
-            varmint_village.add_animals(animal)
-        elif hasattr(animal, 'isSlithering'):
-            slither_inn.add_animals(animal)
-        elif hasattr(animal, 'isSwimming'):
-            critter_cove.add_animals(animal)
+        if hasattr(animal, 'walk_speed'):
+            varmint_village.add_animal(animal)
+        elif hasattr(animal, 'slither_speed'):
+            slither_inn.add_animal(animal)
+        elif hasattr(animal, 'swim_speed'):
+            critter_cove.add_animal(animal)
+
+varmint_village.add_animal(becky)
 
 
 def report_to_terminal():
