@@ -48,6 +48,7 @@ def assignAnimals(animals_list):
             critter_cove.add_animal(animal)
 
 varmint_village.add_animal(becky)
+varmint_village.add_animal(reginald)
 
 
 def report_to_terminal():
